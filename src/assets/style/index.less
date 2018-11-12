@@ -1,0 +1,61 @@
+@import "./variables.less";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#root {
+  height: 100%;
+}
+
+/* popconfirm */
+.ant-popover-buttons {
+  button {
+    font-size: 12px;
+  }
+}
+
+/* layout */
+.ant-layout-content {
+  min-height: initial !important;
+}
+
+/* menu */
+.ant-layout-sider-children {
+  padding-bottom: 24px;
+  overflow: auto;
+}
+
+/* tree */
+.ant-tree-child-tree-open .ant-tree-child-tree-open {
+  display: flex !important;
+}
+.ant-tree span {
+  vertical-align: middle;
+}

@@ -1,0 +1,20 @@
+[
+  "/",
+  "/admin",
+  "/user",
+  "/user/:id",
+  "/merchant",
+  "/films",
+  "/goods",
+  "/package",
+  "/category",
+  "/cinema",
+  "/schedule",
+  "/movie",
+  "/order",
+  "/madmin",
+  "/mrole",
+  "/account",
+  "/log",
+  "*"
+]

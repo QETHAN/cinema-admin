@@ -1,0 +1,28 @@
+body {
+  background-color: #f1f1f1;
+}
+.login {
+  &__layout {
+    color: #f1f1f1;
+    height: 100vh;
+    h1 {
+      color: inherit;
+    }
+    @at-root #{&}__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 50px;
+      &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        min-height: 280px;
+      }
+    }
+    @at-root #{&}__footer {
+      text-align: center;
+    }
+  }
+}

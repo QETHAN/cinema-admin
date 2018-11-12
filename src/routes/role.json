@@ -1,0 +1,72 @@
+[
+  {
+    "name": "商户管理",
+    "route": "/merchant",
+    "child_functions": ["新增", "编辑", "删除"]
+  },
+  {
+    "name": "影片总库管理",
+    "route": "/films",
+    "child_functions": ["查看", "编辑"]
+  },
+  {
+    "name": "超级管理员",
+    "route": "/admin",
+    "child_functions": ["新增", "编辑", "删除"]
+  },
+  {
+    "name": "会员管理",
+    "route": "/user",
+    "child_functions": ["查看", "编辑"]
+  },
+  {
+    "name": "卖品管理",
+    "route": "/goods",
+    "child_functions": ["上架", "下架", "新增", "编辑"]
+  },
+  {
+    "name": "套餐管理",
+    "route": "/package",
+    "child_functions": ["上架", "下架", "新增", "编辑"]
+  },
+  {
+    "name": "分类管理",
+    "route": "/category",
+    "child_functions": ["新增", "编辑", "删除"]
+  },
+  {
+    "name": "影院管理",
+    "route": "/cinema",
+    "child_functions": ["新增", "编辑", "删除", "更新排片"]
+  },
+  {
+    "name": "影片管理",
+    "route": "/movie",
+    "child_functions": ["查看"]
+  },
+  {
+    "name": "排片管理",
+    "route": "/schedule",
+    "child_functions": ["上架", "下架", "新增", "编辑"]
+  },
+  {
+    "name": "订单管理",
+    "route": "/order",
+    "child_functions": []
+  },
+  {
+    "name": "商户管理员",
+    "route": "/madmin",
+    "child_functions": ["新增", "编辑", "删除"]
+  },
+  {
+    "name": "管理员角色",
+    "route": "/admin",
+    "child_functions": ["新增", "编辑", "删除"]
+  },
+  {
+    "name": "操作记录",
+    "route": "/log",
+    "child_functions": []
+  }
+]
