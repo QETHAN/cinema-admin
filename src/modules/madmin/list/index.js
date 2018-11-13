@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { Table, Divider, Popconfirm } from "antd"
 import { observer, inject } from "mobx-react"
 import "./index.less"
+import { pageScrollToTop } from "../../../utils"
 
 @inject("madminStore")
 @observer
@@ -27,6 +28,7 @@ class List extends React.Component {
 
   handlePageChange = (page, size) => {
     this.getData(page, size)
+    pageScrollToTop()
   }
 
   handleSizeChange = (current, size) => {

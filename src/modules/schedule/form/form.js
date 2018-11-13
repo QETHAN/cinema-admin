@@ -86,6 +86,8 @@ class MyForm extends React.Component {
     const store = this.props.scheduleStore
     const form = this.props.form
     const rangeTime = form.getFieldValue("rangeTime")
+    if (!rangeTime) return
+
     const startTime = rangeTime[0].format("YYYY-MM-DD HH:mm:ss")
     const endTime = rangeTime[1].format("YYYY-MM-DD HH:mm:ss")
 
@@ -151,7 +153,9 @@ class MyForm extends React.Component {
         </FormItem>
 
         <FormItem {...formItemLayout} label="时间段选择">
-          {getFieldDecorator("rangeTime", {})(
+          {getFieldDecorator("rangeTime", {
+            rules: [{ required: true, message: "请选择时间段" }]
+          })(
             <RangePicker
               format="YYYY-MM-DD HH:mm:ss"
               showTime

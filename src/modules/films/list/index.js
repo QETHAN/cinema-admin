@@ -4,6 +4,7 @@ import { Table } from "antd"
 import { observer, inject } from "mobx-react"
 import "./index.less"
 import { canShow } from "../../../utils/helper"
+import { pageScrollToTop } from "../../../utils"
 
 @inject("filmsStore")
 @observer
@@ -28,6 +29,7 @@ class List extends React.Component {
 
   handlePageChange = (page, size) => {
     this.getData(page, size)
+    pageScrollToTop()
   }
 
   handleSizeChange = (current, size) => {

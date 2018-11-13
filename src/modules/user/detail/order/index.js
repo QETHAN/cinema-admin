@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom"
 import { Table, Divider } from "antd"
 import { observer, inject } from "mobx-react"
 import SearchForm from "./search"
+import { pageScrollToTop } from "../../../../utils"
 
 @inject("userStore")
 @observer
@@ -13,6 +14,7 @@ class UserOrder extends React.Component {
     this.props.history.push(
       `${this.props.match.url}?page=${page}&per-page=${size}&key=orders`
     )
+    pageScrollToTop()
   }
 
   handleSizeChange = (current, size) => {

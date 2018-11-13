@@ -69,3 +69,16 @@ export const generateSearchParams = params => {
     return ret
   }, {})
 }
+
+const pageScrollToTopHOC = () => {
+  let container = null
+
+  return () => {
+    if (!container) {
+      container = document.getElementsByClassName("ant-layout-content")[0]
+    }
+    container.scrollTo(0, 0)
+  }
+}
+
+export const pageScrollToTop = pageScrollToTopHOC()

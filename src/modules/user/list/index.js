@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { Table } from "antd"
 import { observer, inject } from "mobx-react"
 import "./index.less"
+import { pageScrollToTop } from "../../../utils"
 
 const Detail = lazy(() => import("../detail"))
 
@@ -25,6 +26,7 @@ class List extends React.Component {
     this.props.history.push(
       `${this.props.match.url}?page=${page}&per-page=${size}`
     )
+    pageScrollToTop()
   }
 
   handleSizeChange = (current, size) => {

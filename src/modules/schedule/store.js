@@ -60,6 +60,15 @@ export default class Store {
   @action
   deleteDatePriceArr(index) {
     this.editData.date_price_arr.splice(index, 1)
+    const idx = this.listData.findIndex(item => {
+      return item.id === this.editData.id
+    })
+
+    this.listData[idx].date_price_arr.splice(index, 1)
+
+    this.listData = this.listData.filter((_, index) => {
+      return index !== idx
+    })
   }
 
   @action

@@ -50,7 +50,7 @@ class Home extends React.Component {
 
     return (
       <Layout className={styles.home}>
-        <Layout>
+        <Layout style={{ height: "100%" }}>
           <MySider
             className={styles.sider}
             collapsed={this.state.collapsed}
@@ -58,15 +58,17 @@ class Home extends React.Component {
           />
           <Layout>
             <MyHeader onToggle={this.toggle} />
-            <Content
-              style={{
-                margin: "24px 16px",
-                padding: 24,
-                background: "#fff",
-                minHeight: 280
-              }}
-            >
-              {routes}
+            <Content style={{ height: "100%", overflow: "auto" }}>
+              <div
+                style={{
+                  margin: "24px 16px",
+                  padding: 24,
+                  background: "#fff",
+                  minHeight: 280
+                }}
+              >
+                {routes}
+              </div>
             </Content>
           </Layout>
         </Layout>

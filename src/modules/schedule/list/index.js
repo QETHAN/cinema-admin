@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Table, Divider } from "antd"
 import { observer, inject } from "mobx-react"
+import { pageScrollToTop } from "utils"
 import "./index.less"
 
 @inject("scheduleStore")
@@ -33,6 +34,7 @@ class List extends React.Component {
 
   handlePageChange = (page, size) => {
     this.getData(page, size)
+    pageScrollToTop()
   }
 
   handleSizeChange = (current, size) => {

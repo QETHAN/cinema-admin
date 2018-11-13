@@ -4,6 +4,7 @@ import { Table, Divider, Popconfirm } from "antd"
 import { observer, inject } from "mobx-react"
 import "./index.less"
 import Privilege from "./privilege"
+import { pageScrollToTop } from "../../../utils"
 
 @inject("mroleStore")
 @observer
@@ -32,6 +33,7 @@ class List extends React.Component {
 
   handlePageChange = (page, size) => {
     this.getData(page, size)
+    pageScrollToTop()
   }
 
   handleSizeChange = (current, size) => {

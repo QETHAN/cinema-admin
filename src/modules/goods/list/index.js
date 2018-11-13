@@ -4,6 +4,7 @@ import { Table, Divider } from "antd"
 import { observer, inject } from "mobx-react"
 import "./index.less"
 import SearchForm from "./search"
+import { pageScrollToTop } from "../../../utils"
 
 @inject("goodsStore", "cinemaStore")
 @observer
@@ -40,6 +41,7 @@ class List extends React.Component {
 
   handlePageChange = (page, size) => {
     this.getData(page, size)
+    pageScrollToTop()
   }
 
   handleSizeChange = (current, size) => {

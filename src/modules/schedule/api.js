@@ -14,7 +14,7 @@ export default class Api extends BaseApi {
   }
 
   delPlanDatePrice(id) {
-    return this.base(`plan-info-date-price/${id}`, "del")
+    return this.base(`plan-info-date-prices/${id}`, "del")
   }
 
   del(data) {}
